@@ -40,9 +40,9 @@
                 <td><span (click)="toggleTodo(t)" [class.completed]="t.isCompleted">{{t.id}}</span></td>
                 <td><span (click)="toggleTodo(t)" [class.completed]="t.isCompleted">{{t.description}}</span></td>
                 <td><span (click)="toggleTodo(t)" [class.completed]="t.isCompleted">{{t.responsible}}</span></td>
-                <td><span *ngIf="t.priority=='low'" class="badge badge-primary">{{t.priority}}</span></td>
-                <td><span *ngIf="t.priority=='medium'" class="badge badge-warning">{{t.priority}}</span></td>
-                <td><span *ngIf="t.priority=='high'" class="badge badge-danger">{{t.priority}}</span></td>
+                <td *ngIf="t.priority=='low'"><span class="badge badge-primary">{{t.priority}}</span></td>
+                <td *ngIf="t.priority=='medium'"><span class="badge badge-warning">{{t.priority}}</span></td>
+                <td *ngIf="t.priority=='high'"><span class="badge badge-danger">{{t.priority}}</span></td>
 
                 <td><button class="btn btn-danger" (click)="removeTodo(t)">Delete</button></td>
 
