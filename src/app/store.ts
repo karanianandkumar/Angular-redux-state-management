@@ -17,7 +17,7 @@ export function rootReducer(state,action){
         case ADD_TODO:
             action.todo.id=state.todos.length+1;
             return Object.assign({},state,{
-                todos:state.todos.concat(Object.assign({}),action.todo),
+                todos:state.todos.concat(Object.assign({},action.todo)),
                 lastUpdate:new Date()
             })
 

@@ -3,5 +3,5 @@ export interface ITodo{
     description:string,
     responsible:string,
     priority:string,
-    completed:boolean
+    isCompleted:boolean
 }

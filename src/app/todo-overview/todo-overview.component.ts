@@ -11,9 +11,16 @@ import { NgRedux,select} from '@angular-redux/store'
 })
 export class TodoOverviewComponent implements OnInit {
 
-  constructor() { }
+  @select() todos;
+  @select() lastUpdate;
+
+  constructor(private ngRedux:NgRedux<IAppState>) { }
 
   ngOnInit() {
+  }
+
+  clearTodos(){
+    this.ngRedux.dispatch({type:REMOVE_ALL_TODOS});
   }
 
 }
